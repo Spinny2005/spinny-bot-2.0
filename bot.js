@@ -3,19 +3,18 @@
  * A discord bot created by Spencer Boggs that is designed to troll my friends.
  */
 
-const token = '';
+const token = require('./token.json').token;
 
 const fs = require("fs");
 const {
   Client,
-  Intents,
   Collection,
   GatewayIntentBits,
   Partials,
 } = require("discord.js");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
-const { token, clientId, guildId } = require("./config.json");
+const { clientId, guildId } = require("./config.json");
 
 const client = new Client({
   intents: [
